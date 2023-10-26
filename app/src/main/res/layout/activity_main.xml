@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:background="@drawable/aa"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:layout_margin="20dp"
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="selection difficulty"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/easy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="Easy"
+                        android:textSize="11sp"
+                        tools:ignore="HardcodedText,SmallSp"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       
+                        android:checked="false"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="Medium"
+                        android:textSize="11sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <RadioButton
+                        android:id="@+id/hard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       
+                        android:checked="false"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="Hard"
+                        android:textSize="11sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="selection operation"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioGroup
+                    android:id="@+id/rg_operation"
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/addition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="Addition"
+                        android:textSize="11sp"
+                        tools:ignore="HardcodedText,SmallSp"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/division"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       
+                        android:checked="false"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="Division"
+                        android:textSize="11sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+
+                    <RadioButton
+                        android:id="@+id/multiplication"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       
+                        android:checked="false"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="Multiplication"
+                        android:textSize="11sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                    <RadioButton
+                        android:id="@+id/subtraction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       
+                        android:checked="false"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="Subtraction"
+                        android:textSize="11sp"
+                        tools:ignore="HardcodedText,SmallSp" />
+                </RadioGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:text="Number of questions"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:background="@drawable/baseline_horizontal_rule_24"
+                android:layout_margin="10dp"
+                android:id="@+id/img_jian"
+                android:onClick="jian"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="1"
+                android:id="@+id/tv_number"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:background="@drawable/baseline_add_24"
+                android:layout_margin="10dp"
+                android:id="@+id/img_jia"
+                android:onClick="jia"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_start"
+            android:text="START"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:onClick="start"
+            android:layout_weight="1"
+            android:background="@drawable/bg"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
+</layout>
